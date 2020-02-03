@@ -38,8 +38,6 @@ const useStyles = makeStyles(theme => ({
   searchIcon: {
     marginLeft: '28%',
     marginRight: '2%',
-    // position: 'absolute',
-    // top: 5,
     color: '#0E1D25'
   },
 
