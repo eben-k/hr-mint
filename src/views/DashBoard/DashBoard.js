@@ -6,7 +6,10 @@ import { OrderDetails, PaymentDetails, Payments, TransactionValue, TransactionVo
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(4)
+    flexGrow: 1
+  },
+  paper: {
+    padding: theme.spacing(2),
   }
 }));
 
@@ -17,9 +20,6 @@ const DashBoard = () => {
       <Grid
         container
         spacing={4}
-        // direction="row"
-        // justify="space-between"
-        // alignItems="center"
       >
         <Grid
           item
@@ -28,7 +28,7 @@ const DashBoard = () => {
           xl={3}
           xs={12}
         >
-          <TransactionVolume />
+          <TransactionVolume className={classes.paper} />
         </Grid>
         <Grid
           item
@@ -37,7 +37,7 @@ const DashBoard = () => {
           xl={3}
           xs={12}
         >
-          <TransactionValue />
+          <TransactionValue className={classes.paper} />
         </Grid>
         <Grid
           item
@@ -46,7 +46,7 @@ const DashBoard = () => {
           xl={3}
           xs={12}
         >
-          <TotalVolume />
+          <TotalVolume className={classes.paper} />
         </Grid>
         <Grid
           item
@@ -55,7 +55,7 @@ const DashBoard = () => {
           xl={3}
           xs={12}
         >
-          <TotalValue />
+          <TotalValue className={classes.paper} />
         </Grid>
         <Grid
           item
@@ -64,36 +64,39 @@ const DashBoard = () => {
           xl={9}
           xs={12}
         >
-          <SaleChart />          
+          <SaleChart className={classes.paper} />          
         </Grid>
+
         <Grid
           alignItems="flex-end"
           container
-          direction="column"
           justify="space-evenly"
           spacing={2}
+          lg={4}
+          md={12}
+          xl={3}
+          xs={12}
         >
           <Grid
             item
-            lg={2}
-            md={3}
-            xl={3}
-            xs={6}
+            lg={12}
+            md={6}
+            xl={12}
+            xs={12}
           >
-            <OrderDetails />
-
+            <OrderDetails className={classes.paper} />
           
           </Grid>
           <Grid
             item
-            lg={2}
-            md={3}
-            xl={3}
-            xs={6}
+            lg={12}
+            md={6}
+            xl={12}
+            xs={12}
           >
-            <PaymentDetails /> 
+            <PaymentDetails className={classes.paper} /> 
           </Grid>
-        </Grid>
+         </Grid>
         <Grid
           item
           lg={12}
@@ -101,7 +104,7 @@ const DashBoard = () => {
           xl={12}
           xs={12}
         >
-          <Payments />
+          <Payments className={classes.paper} />
         </Grid>
       </Grid>
     </div>

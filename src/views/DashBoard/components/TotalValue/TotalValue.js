@@ -19,7 +19,8 @@ const useStyles = makeStyles(() => ({
     fontWeight: 700
   },
   icon: {
-    border: '1px solid #0294FF'
+    border: '1px solid #0294FF',
+    background: 'linear-gradient(180deg, rgba(2, 148, 255, 0.126274) 33.13%, rgba(255, 255, 255, 0.0001) 117.06%)'
   }
 }));
 

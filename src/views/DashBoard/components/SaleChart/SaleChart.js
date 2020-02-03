@@ -34,18 +34,24 @@ const useStyles = makeStyles(() => ({
   },
   cardHeader: {
       display: 'flex',
+      justifyContent: 'space-between'
   },
   textBox: {
     display: 'flex',
-    border: '1px solid #DDE0E3',
+    width: '30rem',
     borderRadius: '4.25px',
-    width: '138px',
     height: '31px',
-    position: 'absolute',
-    left: '55%',
-    marginTop: '0.5%',
+    marginTop: '1%',
     justifyContent: 'space-between'
-  }
+  },
+   calendarDropdown:{
+    display: 'flex',
+    width: '10rem',
+    justifyContent: 'space-between',
+    border: '1px solid #DDE0E3',
+    padding: 5
+
+   }
 }));
 
 const SaleChart = props => {
@@ -59,23 +65,24 @@ const SaleChart = props => {
       className={classes.root}
     >
         <div className={classes.cardHeader}>
+            <CardHeader
+                title={`Today: ${dayjs().format('DD-MM-YYYY')}`}
+            />
+
             <div className={classes.textBox}>
-                <Typography>1 Jan - 1 Jun</Typography>
-                <ExpandMoreIcon />
+                <div className={classes.calendarDropdown}>
+                    <Typography>1 Jan - 1 Jun</Typography>
+                    <ExpandMoreIcon />
+                </div>
+                <Button
+                    size="small"
+                    variant="text"
+                    >
+                    <NavigateBeforeIcon />
+                    <NavigateNextIcon />
+                </Button>
             </div>
 
-      <CardHeader
-        action={
-          <Button
-            size="small"
-            variant="text"
-          >
-            <NavigateBeforeIcon />
-            <NavigateNextIcon />
-          </Button>
-        }
-        title={`Today: ${dayjs().format('DD-MM-YYYY')}`}
-      />
         </div>
       <Divider />
       <CardContent>

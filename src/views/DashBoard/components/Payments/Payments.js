@@ -161,7 +161,7 @@ Payments
                       </TableCell>     
                       <TableCell>&#36;{payment.price}</TableCell>
                       <TableCell>{payment.transactionNo}</TableCell>
-                      <TableCell>{dayjs(payment.createdAt).format('HH:mm:ss')}</TableCell>
+                      <TableCell>{dayjs(payment.createdAt).format('HH:mm')}</TableCell>
                       <TableCell size="small">
                         <div className={classes.statusContainer}>
                           <div className={classes.statusItem}>
