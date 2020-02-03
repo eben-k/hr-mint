@@ -45,7 +45,6 @@ const SideBarNav = props => {
       {...rest}
       className={classes.root}
     >
-      {console.log(typeof pages, pages, 'pages')}
       {pages.map(page => 
         <ListItem
           className={classes.item}
