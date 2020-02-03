@@ -1,6 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, Grid, Typography, LinearProgress } from '@material-ui/core';
+import {
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+} from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -14,16 +19,15 @@ const useStyles = makeStyles(() => ({
     fontWeight: 700
   },
   icon: {
-    height: 32,
-    width: 32
-  },
+    border: '1px solid #0294FF'
+  }
 }));
 
 const TransactionValue = props => {
   const { ...rest } = props;
 
   const classes = useStyles();
-    
+
   return (
     <Card
       {...rest}
@@ -41,17 +45,29 @@ const TransactionValue = props => {
               gutterBottom
               variant="body2"
             >
-                          Daily Transaction Value
+              Daily Transaction Value
             </Typography>
             <Typography variant="h3">&#8358; 4,000,000</Typography>
           </Grid>
           <Grid item>
-            <LinearProgress className={classes.icon} />
+            <svg
+              className={classes.icon}
+              fill="none"
+              height="21"
+              viewBox="0 0 64 21"
+              width="64"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 11.1939L9.85714 20.2551L28.0376 14.9694L42.4887 7.79592L50.8797 11.1939L63 1"
+                stroke="#0294FF"
+              />
+            </svg>
           </Grid>
         </Grid>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
 export default TransactionValue;

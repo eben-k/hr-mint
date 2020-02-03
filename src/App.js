@@ -1,11 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+// import logo from './logo.svg';
+// import './App.css';
+
+import { Central as Main } from './layouts';
+import { DashBoard } from './views';
+import theme from './theme';
+import './assets/scss/index.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <ThemeProvider theme={theme}>
+      <Main>
+        <DashBoard />
+      </Main>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,8 +27,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </header> */}
+    </ThemeProvider>
   );
 }
 
